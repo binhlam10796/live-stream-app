@@ -2,7 +2,6 @@
 
 ## Initialize database live_stream_app
 ![Screenshot 2022-03-30 160224](https://user-images.githubusercontent.com/42068261/161008277-cd3f9f24-3adf-4f33-aa2d-32c66873a31a.png)
-
 ### Table files
 CREATE TABLE `files` (
  `id` varchar(255) NOT NULL,
@@ -69,3 +68,32 @@ CREATE TABLE `user_roles` (
  CONSTRAINT `user_roles_ibfk_3` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
  CONSTRAINT `user_roles_ibfk_4` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+## Configure Spring Datasource, JPA, App properties
+Open `src/main/resources/application.properties`
+
+```properties
+spring.datasource.url= jdbc:mysql://localhost:3306/testdb?useSSL=false
+spring.datasource.username= root
+spring.datasource.password= 123456
+
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto= update
+
+# App Properties
+binhldq.app.jwtSecret= bezKoderSecretKey
+binhldq.app.jwtExpirationMs= 3600000
+binhldq.app.jwtRefreshExpirationMs= 86400000
+```
+
+## Run Spring Boot application
+```
+mvn spring-boot:run
+```
+
+## Run following SQL insert statements
+```
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+```

@@ -73,7 +73,7 @@ CREATE TABLE `user_roles` (
 Open `src/main/resources/application.properties`
 
 ```properties
-spring.datasource.url= jdbc:mysql://localhost:3306/testdb?useSSL=false
+spring.datasource.url= jdbc:mysql://localhost:3306/live_stream_app?useSSL=false
 spring.datasource.username= root
 spring.datasource.password= 123456
 
@@ -87,6 +87,7 @@ binhldq.app.jwtRefreshExpirationMs= 86400000
 ```
 
 ## Run Spring Boot application
+Go to Spring Boot folder
 ```
 mvn spring-boot:run
 ```
@@ -97,3 +98,5 @@ INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 ```
+
+## Final -> Run Flutter application

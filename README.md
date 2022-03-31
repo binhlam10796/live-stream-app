@@ -1,5 +1,31 @@
 # live-stream-app
 
+## Backend source structure
+### Sử dụng Spring Boot JPA theo cấu trúc được chia thành các phần
+`Controller`
+`Advice`
+`Exception`
+`Models`
+`Payload`
+`Repository`
+`Service`
+`Security`
+
+## Front end source structure
+### Sử dụng Flutter theo mô hình Bloc Pattern được chia thành từng module riêng lẻ
+### Trong từng model chứa các thành phần với các chức năng riêng biệt nhau
+`Bloc` sử lý các logic dựa và các sự kiện (event) nhận từ các screen và trả trạng
+thái theo các state cụ thể được định nghĩa trước đó
+`Model` chức các object dùng để map vào các kiểu dữ liệu json trả về từ API hoặc
+các object dùng cho việc truyền vào các API gửi đi.
+`Repository` đóng vai trò như cầu nối từ ứng dụng đến API server
+`Screen` chứa giao diện ứng dụng người dùng
+### Ngoài ra trong cấu trúc còn các thành phần common được tái sử dụng lại nhiều lần
+`Constants` chứa các object, variable, state, key được sử dụng ở nhiều nơi
+`Utils` chứa các tiện ích được định nghĩa sẵn để tối ưu hoá việc
+tránh phát sinh các hàm trùng nhau vì một tính năng cụ thể
+`Widgets` chứa các Widgets trong Flutter được custom lại theo giao diện từ phía UI/UX
+
 ## Initialize database live_stream_app
 ![Screenshot 2022-03-30 160224](https://user-images.githubusercontent.com/42068261/161008277-cd3f9f24-3adf-4f33-aa2d-32c66873a31a.png)
 ### Table files

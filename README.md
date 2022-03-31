@@ -1,5 +1,6 @@
 # live-stream-app
-
+The instruction can be found at:
+[Live Stream App With Spring Boot And Firebase push notification](https://youtu.be/jAneqBOoW_o)
 ## Backend source structure
 ### Sử dụng Spring Boot JPA theo cấu trúc được chia thành các phần
 `Controller`

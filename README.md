@@ -125,7 +125,7 @@ binhldq.app.jwtRefreshExpirationMs= 86400000
 ```
 
 ## Run Spring Boot application
-Go to Spring Boot folder
+Go to Spring Boot folder `spring-boot-refresh-token-jwt-master`
 ```
 mvn spring-boot:run
 ```

@@ -3,6 +3,7 @@
 ## Initialize database live_stream_app
 ![Screenshot 2022-03-30 160224](https://user-images.githubusercontent.com/42068261/161008277-cd3f9f24-3adf-4f33-aa2d-32c66873a31a.png)
 ### Table files
+```
 CREATE TABLE `files` (
  `id` varchar(255) NOT NULL,
  `data` mediumblob NOT NULL,
@@ -10,7 +11,9 @@ CREATE TABLE `files` (
  `type` varchar(255) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+```
 ### Table users
+```
 CREATE TABLE `users` (
  `id` double NOT NULL AUTO_INCREMENT,
  `email` varchar(50) NOT NULL,
@@ -28,7 +31,9 @@ CREATE TABLE `users` (
  KEY `file` (`file`),
  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`file`) REFERENCES `files` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4
+```
 ### Table refresh_token
+```
 CREATE TABLE `refresh_token` (
  `id` double NOT NULL AUTO_INCREMENT,
  `user_id` double NOT NULL,
@@ -38,13 +43,17 @@ CREATE TABLE `refresh_token` (
  KEY `user_id` (`user_id`),
  CONSTRAINT `refresh_token_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=utf8mb4
+```
 ### Table roles
+```
 CREATE TABLE `roles` (
  `id` double NOT NULL AUTO_INCREMENT,
  `name` varchar(255) NOT NULL,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='Roles data'
+```
 ### Table streams
+```
 CREATE TABLE `streams` (
  `id` double NOT NULL AUTO_INCREMENT,
  `user_id` double NOT NULL,
@@ -55,7 +64,9 @@ CREATE TABLE `streams` (
  KEY `user_id` (`user_id`),
  CONSTRAINT `streams_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=126 DEFAULT CHARSET=utf8mb4
+```
 ### Table user_roles
+```
 CREATE TABLE `user_roles` (
  `user_id` double NOT NULL,
  `role_id` double NOT NULL,
@@ -68,6 +79,7 @@ CREATE TABLE `user_roles` (
  CONSTRAINT `user_roles_ibfk_3` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
  CONSTRAINT `user_roles_ibfk_4` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+```
 
 ## Configure Spring Datasource, JPA, App properties
 Open `src/main/resources/application.properties`

@@ -10,8 +10,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  * Created by Benjamin Lam on 3/29/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 @Entity
 @Table(name = "files")

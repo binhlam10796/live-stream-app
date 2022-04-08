@@ -12,8 +12,8 @@ import java.io.IOException;
 
 /**
  * Created by Benjamin Lam on 3/30/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 @Service
 public class FCMInitializer {

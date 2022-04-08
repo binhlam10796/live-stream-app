@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 /**
  * Created by Benjamin Lam on 3/29/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 @Repository
 public interface FileDBRepository extends JpaRepository<FileDB, String> {

@@ -10,8 +10,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 /**
  * Created by Benjamin Lam on 3/29/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 @ControllerAdvice
 public class FileUploadExceptionAdvice extends ResponseEntityExceptionHandler {

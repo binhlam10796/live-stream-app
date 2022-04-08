@@ -4,8 +4,8 @@ import javax.validation.constraints.NotNull;
 
 /**
  * Created by Benjamin Lam on 3/31/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 public class ApproveRequest {
 

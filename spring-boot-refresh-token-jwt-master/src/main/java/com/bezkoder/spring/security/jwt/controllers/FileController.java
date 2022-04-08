@@ -17,8 +17,8 @@ import java.util.stream.Collectors;
 
 /**
  * Created by Benjamin Lam on 3/29/2022.
- * VNPT-IT KV5 LTD
- * binhldq.tgg@vnpt.vn
+ * SELF EDU
+ * binhlam10796@gmail.com
  */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
